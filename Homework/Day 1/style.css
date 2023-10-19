@@ -6,6 +6,7 @@ html {
 body {
     background: linear-gradient(rgb(237, 110, 110), rgb(129, 129, 255)) no-repeat;
 }
+
 .title {
     text-align: center;
 }
@@ -19,6 +20,10 @@ img {
     height: 200px;
     border-radius: 50%;
     border: 5px dashed #000;
+}
+
+.desc {
+    font-size: 20px;
 }
 
 table {
@@ -36,3 +41,5 @@ table a {
     color: #c8c8c8;
     text-decoration: none;
 }
+
+
