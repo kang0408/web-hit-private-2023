@@ -24,8 +24,9 @@ body {
     background-color: #fff;
     box-shadow: 0 2px 10px #ccc;
     color: var(--clr);
-    margin: 0;
+    margin: auto;
     margin-top: 190px;
+    width: 450px;
 }
 
 .login-form {
