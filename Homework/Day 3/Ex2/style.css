@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+:root {
+    --clr-1: #ffce9e;
+    --clr-2: #d18b47;
+    --sqr: 500px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: var(--sqr);
+    width: var(--sqr);
+}
+
+.box {
+    height: calc(100% / 8);
+    width: calc(100% / 8);
+}
+
+.box-1 {
+    background-color: var(--clr-1);
+}
+
+.box-2 {
+    background-color: var(--clr-2);
+}
