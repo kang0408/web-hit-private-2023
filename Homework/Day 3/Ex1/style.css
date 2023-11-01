@@ -3,8 +3,17 @@
     padding: 0;
 }
 
-body {
+body,
+.wrap,
+.h, 
+.i,
+.t,
+.n1,
+.n4 {
     display: flex;
+}
+
+body {
     justify-content: center;
     height: 600px;
     align-items: center;
@@ -21,41 +30,62 @@ body {
     /* margin: 10px; */
 }
 
-#wrap {
+.wrap {
     width: 100%;
     height: auto;
-    display: flex;
     justify-content: center;
     gap: var(--s);
 }
 
 .h {
-    display: flex;
     align-items: center;
+    position: relative;
+    animation: updown 1.5s linear infinite;
+    animation-direction: alternate;
+}
+
+.i {
+    flex-direction: column;
+    position: relative;
+    animation: downup 1.5s linear 1.1s infinite alternate;
 }
 
 .t {
-    display: flex;
+    position: relative;
+    animation: updown 1.5s linear 2.1s infinite alternate; 
+}
+
+.n1 {
+    flex-direction: column;
+    position: relative;
+    animation: downup 1.5s linear 3.1s infinite alternate; 
 }
 
 .n4 {
-    display: flex;
     align-items: center;
+    position: relative;
+    animation: updown 1.5s linear 4.1s infinite alternate; 
 }
 
 .n4 div:nth-child(1) {
     align-self: flex-start;
 }
 
-/* .i:hover {
-    cursor: pointer;
-    animation-name: jump-jump;
-    animation-duration: 2s;
-    animation-timing-function: linear;
+@keyframes updown {
+    from {
+        top: -50px;
+    }
+    to{
+        top: 25px;
+    }
 }
 
-@keyframes jump-jump {
-    to {
-        margin-bottom: 50px;
+
+@keyframes downup {
+    from {
+        top: 25px;
     }
-} */
+    to {
+        top: -50px;
+    }
+}
