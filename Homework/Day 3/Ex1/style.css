@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    align-items: center;
+}
+
+:root {
+    --s: 30px;
+}
+
+.box {
+    height: var(--s);
+    width: var(--s);
+    background-color: #FFA900;
+    /* margin: 10px; */
+}
+
+#wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--s);
+}
+
+.h {
+    display: flex;
+    align-items: center;
+}
+
+.t {
+    display: flex;
+}
+
+.n4 {
+    display: flex;
+    align-items: center;
+}
+
+.n4 div:nth-child(1) {
+    align-self: flex-start;
+}
+
+/* .i:hover {
+    cursor: pointer;
+    animation-name: jump-jump;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes jump-jump {
+    to {
+        margin-bottom: 50px;
+    }
+} */
