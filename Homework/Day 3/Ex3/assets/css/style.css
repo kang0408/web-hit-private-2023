@@ -1,7 +1,165 @@
-p {
-    font-family: 'Inconsolata', monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    font-family: 'Raleway';
+p {
+    font-family: 'Inconsolata', monospace;
+    line-height: 20px;
 }
+
+.container {
+    padding: 30px 50px;
+}
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.header__title {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.header__trigger {
+    font-size: 20px;
+}
+
+/* Content */
+
+/* Products */
+.products { 
+    padding: 50px 0;
+}
+/* Products header */
+.products .products__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-right: -10px;
+}
+
+.owner .owner--name {
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.owner .owner--desc {
+    font-size: 15px;
+    font-weight: 500;
+    word-spacing: 6px;
+}
+
+.products .nav-bar {
+    display: flex;
+    list-style-type: none;
+}
+
+.products .nav-bar a {
+    color: #000;
+    font-family: 'Inconsolata', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0 10px
+}
+/* Product image */
+.product__img {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px;
+}
+
+.product__img img {
+    width: calc(100% / 3 - 20px) ;
+    margin: 10px;
+}
+
+.title {
+    font-family: 'Raleway';
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.desc {
+    font-size: 15px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* Clients */
+.clients {
+    padding: 100px 0 50px;
+}
+
+.clients__logo {
+    display: flex;
+}
+
+.clients__logo img {
+    width: calc(100% / 6);
+}
+/* Services */
+.services {
+    padding: 100px 0 50px;
+}
+
+.services__lists {
+    display: flex;
+}
+
+.lists__item {
+    padding: 0 10px;
+    width: calc(100% / 4);
+}
+
+.lists__item i {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.lists__item p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.lists__item .item__title {
+    font-family: 'Raleway';
+    font-size: 18px;
+}
+
+/* Footer */
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: 50px 0 50px;
+}
+
+.link a {
+    color: #000;
+}
+
+.link i {
+    border-radius: 50%;
+    background-color: #e9e9e9;
+    font-size: 15px;
+    padding: 15px;
+    margin: 0 5px;
+}
+
+
+
+
