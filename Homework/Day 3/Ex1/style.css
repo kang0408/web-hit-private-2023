@@ -71,7 +71,7 @@ body {
     align-self: flex-start;
 }
 
-@keyframes updown {
+/* @keyframes updown {
     from {
         top: -50px;
     }
@@ -88,4 +88,4 @@ body {
     to {
         top: -50px;
     }
-}
+} */
