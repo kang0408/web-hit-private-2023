@@ -1,0 +1,144 @@
+/* Phone */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px 20px;
+    }
+    /* Header */ 
+    #header {
+        margin-top: 20px;
+    }
+    /* Products header */
+    .products .products__header {
+        display: block;
+        margin: 0 -20px 25px;
+    }
+
+    .owner {
+        text-align: center;
+    }
+
+    .owner .owner--name {
+        font-size: 25px;
+    }
+
+    .owner .owner--desc {
+        font-size: 10px;
+    }
+
+    /* Product nav-bar */
+    .products .nav-bar {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .nav-bar a {
+        font-size: 16px;
+    }
+
+    /* Product */
+    .product__img img {
+        width: calc(100% - 20px) ;
+    }
+
+    .clients {
+        padding: 0;
+    }
+
+    .clients__logo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .clients__logo img {
+        padding: 10px 0;
+        width: calc(100% / 3);
+    }
+
+    /* Services */
+    .services {
+        padding: 50px 0 0;
+    }
+
+    .services__lists {
+        display: block;
+        text-align: center;
+    }
+
+    .lists__item {
+        width: 100%;
+        padding: 24px 0;
+    }
+
+    .lists__item div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lists__item i {
+        font-size: 30px;
+        margin-right: 20px;
+    }
+
+    .lists__item p {
+        font-size: 18px;
+    }
+
+    .lists__item .item__title {
+        font-size: 21px;
+    }
+    /* Footer */
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0 50px;
+    }
+
+    .copyright {
+        margin-bottom: 20px;
+    }
+
+    .copyright p {
+        text-align: center;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 601px ) and (max-width: 868px){
+    .products .products__header {
+        display: block;
+        margin: 0 -20px 25px;
+    }
+
+    .owner {
+        text-align: center;
+    }
+
+    /* Product nav-bar */
+    .products .nav-bar {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .nav-bar a {
+        font-size: 20px;
+    }
+
+    .services__lists {
+        flex-wrap: wrap;
+    }
+
+    .lists__item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    #footer {
+        padding: 0 0 50px;
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+
+}
