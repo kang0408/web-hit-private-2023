@@ -1,0 +1,115 @@
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Header */
+    #header > div:nth-child(2) {
+        width: 100%;
+        align-items: center;
+        left: 0;
+    }
+
+    #header .name {
+        font-size: 32px;
+    }
+
+    #header .introduce {
+        font-size: 20px;
+    }
+
+    .introduce span {
+        font-size: 20px;
+        top: 7px;
+        animation: typing 2.5s steps(27, end) infinite alternate, blinking 0.5s infinite;
+    }
+
+    @keyframes typing {
+        0%, 10%, 20% { width: 0 }
+        80%, 95%, 100% { width: 170px }
+    }
+
+    #header .social-links a {
+        font-size: 18px;
+    }
+    /* Nav */
+    #nav {
+        display: none;
+    }
+
+    #nav-mt {
+        display: block;
+    }
+
+    /* Content */
+    .content {
+        padding: 0 12px;
+    }
+    /* About */
+    #about > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .avt {
+        margin-right: 0;
+    }
+
+    .profile .job {
+        padding-top: 24px;
+    }
+
+    .profile .info p {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Facts */
+    #facts > div {
+        flex-direction: column;
+    }
+
+    #facts .item {
+        margin-bottom: 30px;
+    }
+
+    #facts .item .icon {
+        font-size: 24px;
+    }
+
+    #facts .item p.number {
+        font-size: 36px;
+    }
+    /* Skills */
+    #skills > div {
+        flex-direction: column;
+    }
+
+    #skills .item {
+        width: 100%;
+    }
+
+    /* Services */
+    #services > div {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    #services .item {
+        width: 100%;
+    }
+
+    /* Contact */
+    #contact > div {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 30px 12px;
+    }
+
+    .footer .footer__desc {
+        font-size: 14px;
+    }
+}
