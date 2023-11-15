@@ -52,7 +52,7 @@ html {
 
 #nav-mt .side-nav {
     display: flex;
-    width: 80%;
+    width: 300px;
     height: 100vh;
     background-color: #fff;
     border: 1px solid #f2f3f5;
