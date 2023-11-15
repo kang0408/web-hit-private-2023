@@ -589,3 +589,22 @@ form > div > input {
     align-items: center;
     justify-content: center;
 }
+/* Scroll to top */
+.scroll {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.scroll:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
