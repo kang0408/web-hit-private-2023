@@ -1,7 +1,8 @@
 let mySideNav = document.querySelector('.side-nav');
 let myExit = document.querySelector('.exit-bar');
-// When click button open bar, show exit bar and side nav
+
 function showSideNav() {
+    // When click button open bar, show exit bar and side nav
     if(mySideNav.style.left === "-100%" && myExit.style.display === "none") {
         mySideNav.style.left = "0";
         myExit.style.display = "flex";
