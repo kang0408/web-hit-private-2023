@@ -62,7 +62,7 @@ html {
     position: fixed;
     top: 0;
     z-index: 99;
-    transition: left 1.5s ease-in-out;
+    transition: left 1.25s ease-in-out;
 }
 
 .side-nav .side-nav-item {
