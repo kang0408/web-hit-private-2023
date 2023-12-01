@@ -1,0 +1,273 @@
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    /* Header */
+    header.flex {
+        display: flex;
+    }
+
+    header .nav {
+        display: none;
+    }
+
+    header .nav--mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav--mobile .nav-item {
+        font-size: 23px;
+    }
+
+    .nav--mobile .nav-mb-lv1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-mb-lv1 i {
+        color: #fff;
+        padding: 19px 21px;
+    }
+
+    .nav-mb-lv1 i:hover {
+        background-color: #ccc;
+    }
+
+    .nav-mb-lv1:hover .nav-mb-lv2{
+        display: block;
+    }
+
+    .nav--mobile .nav-mb-lv2 {
+        display: none;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        top: 100%;
+    }
+
+    header .search {
+        display: none;
+    }
+
+    /* Home */
+    #home .banner--info {
+        display: none;
+    }
+    /* Band */
+    #band {
+        padding: 90px 15px;
+    }
+
+    #band .description {
+        line-height: 20px;
+    }
+
+    #band .member-list {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #band .member-list .member {
+        margin-bottom: 20px;
+    }
+
+    .member-list .member .member-img {
+        width: 200px;
+    }
+
+    /* Tour */
+    #tour {
+        padding: 90px 15px;
+    }
+
+    #tour .tour-list {
+        flex-direction: column;
+    }
+
+    #tour .tour-list .tour {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tour-list .tour .info {
+        font-size: 18px;
+    }
+    /* Contact */ 
+    #contact {
+        padding: 90px 15px;
+    }
+
+    #contact > div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    #contact > div:nth-child(2) .info {
+        margin-bottom: 20px;
+    }
+
+    #contact form > div {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #contact form > div input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #contact form > button {
+        width: 100%;
+    }
+
+    /* Ticket */
+    .ticket {
+        width: 350px;
+    }
+}
+
+/* Small Tablet */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    /* Header */
+    header.flex {
+        display: flex;
+    }
+
+    header .nav {
+        display: none;
+    }
+
+    header .nav--mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav--mobile .nav-item {
+        font-size: 18px;
+    }
+
+    .nav--mobile .nav-mb-lv1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-mb-lv1 i {
+        color: #fff;
+        padding: 19px 21px;
+    }
+
+    .nav-mb-lv1 i:hover {
+        background-color: #ccc;
+    }
+
+    .nav-mb-lv1:hover .nav-mb-lv2{
+        display: block;
+    }
+
+    .nav--mobile .nav-mb-lv2 {
+        display: none;
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        top: 100%;
+    }
+
+    header .search {
+        display: none;
+    }
+
+    /* Band */
+    #band {
+        padding: 90px 18px;
+    }
+
+    #band .description {
+        line-height: 20px;
+    }
+
+    #band .member-list {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #band .member-list .member {
+        margin-bottom: 20px;
+    }
+
+    .member-list .member .member-img {
+        width: 300px;
+    }
+
+    /* Tour */
+    #tour {
+        padding: 90px 18px;
+    }
+
+    #tour .tour-list {
+        flex-direction: column;
+    }
+
+    #tour .tour-list .tour {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .tour-list .tour .info {
+        font-size: 18px;
+    }
+
+    /* Contact */
+    #contact {
+        padding: 90px 18px;
+    }
+
+    #contact > div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    #contact > div:nth-child(2) .info {
+        margin-bottom: 20px;
+    }
+
+    #contact form > div {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #contact form > div input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #contact form > button {
+        width: 100%;
+    }
+
+    /* Ticket */
+    .ticket {
+        width: 550px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #band {
+        padding: 90px 18px;
+    }
+
+    #tour {
+        padding: 90px 18px;
+    }
+
+    #contact {
+        padding: 90px 18px;
+    }
+}
+
+
