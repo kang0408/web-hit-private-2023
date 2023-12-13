@@ -6,7 +6,7 @@ function checkSymmetricNum(num) {
     let flag;
     
     if (lengthNum == 1) 
-    flag = false;
+        flag = false;
     else {
         let i = 0;
         while (i < lengthNum / 2) {
@@ -16,7 +16,7 @@ function checkSymmetricNum(num) {
                     flag = false;
                 i++;
                 lengthNum--;
-            }
+        }
     }
 
     return flag;
