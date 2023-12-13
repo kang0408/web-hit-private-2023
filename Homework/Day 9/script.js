@@ -90,7 +90,7 @@ function pascalRectangle(num) {
     return mainArr;
 }
 
-console.log(pascalRectangle(6));
+console.log(pascalRectangle(8));
 
 // 5.
 console.log("------Bai 5-----");
