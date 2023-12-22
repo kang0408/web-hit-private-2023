@@ -38,7 +38,7 @@ function arrayNum(num) {
 }
 
 console.log(arrayNum(1234));
-console.log(arrayNum(9999));
+console.log(arrayNum(123456789));
 
 // 3.
 console.log("------Bai 3-----");
@@ -101,11 +101,10 @@ function formatArr(arrNum) {
         if (arrNum[i] === 0) {
             zeroArr.push(arrNum[i]);
             arrNum.splice(i, 1);
+            i--;
         }
-    
-        
     return arrNum.concat(zeroArr);
 }
 
-console.log(formatArr([0,1,0,3,12]));
+console.log(formatArr([0,0,0,21,3,0,0,5]));
 console.log(formatArr([0]));
