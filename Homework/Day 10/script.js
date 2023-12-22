@@ -119,4 +119,5 @@ for (let i = 0; i < newDogs.length - 1; i++) {
         newDogs[m] = obj;
     }
 }
+console.log("Sort increasing dogs by recommended amount of food: ")
 console.log(newDogs);
