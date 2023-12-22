@@ -31,7 +31,7 @@ const dogs = [
     { weight: 32, curFood: 340, owners: ["Michael"] },
   ];
 
-// Calculate recommended food 
+// Hãy tính lượng thức ăn recommended và lưu thành 1 thuộc tính (recFood) cho từng chú chó
 let calcRecFood;
 dogs.forEach(function(dog) {
     calcRecFood = dog.weight ** 0.75 * 28;
@@ -41,83 +41,63 @@ dogs.forEach(function(dog) {
     console.log(dog);
 });
 
-// Find Sarah's dog
-dogs.forEach(function(dog) {
-    dog.owners.forEach(function(owner) {
-        if (owner === "Sarah") {
-            console.log("Found " + owner + "'s dog");
-            if (dog.recFood > dog.curFood) 
-                console.log("It eats too much!");
-            else 
-                console.log("It eats too little");
-        }
-    })
-});
 
-// Owner array has dog eats too much and too little
+// Tìm chú chó của Sarah và in ra console nếu nó ăn quá nhiều hoặc quá ít
+const findSarahDog = dogs.find(function(dog) {
+    return dog.owners.includes("Sarah");
+});
+if (findSarahDog.curFood > findSarahDog.recFood * 1.1) console.log("Sarah's dog eats too much!");
+if (findSarahDog.curFood < findSarahDog.recFood * 0.9) console.log("Sarah's dog eats too little!");
+
+
+// Tạo một mảng chứa tất cả chủ nhân của những chú chó ăn quá nhiều (ownersEatTooMuch) 
+// và một mảng chứa tất cả chủ nhân của những chú chó ăn quá ít (ownersEatTooLittle)
 const ownersEatTooMuch = [];
 const ownersEatTooLittle = [];
+let minFood = 0;
+let maxFood = 0;
 dogs.forEach(function(dog) {
-    if (dog.recFood > dog.curFood) 
-        ownersEatTooMuch.push(dog.owners);
-    else 
-    ownersEatTooLittle.push(dog.owners);
+    minFood = dog.recFood * .9;
+    maxFood = dog.recFood * 1.1;
+    if (dog.curFood > maxFood) ownersEatTooMuch.push(dog.owners);
+    if (dog.curFood < minFood) ownersEatTooLittle.push(dog.owners);
 });
+console.log(ownersEatTooMuch.flat());
+console.log(ownersEatTooLittle.flat());
 
-console.log(ownersEatTooMuch);
-console.log(ownersEatTooLittle);
-
+// Từ 2 mảng trên hãy in ra A and B and C's dogs eat too much! và D and E and F's dogs eat too little!
 console.log(ownersEatTooMuch.flat().join(" and ") + "'s dogs eat too much!");
 console.log(ownersEatTooLittle.flat().join(" and ") + "'s dogs eat too little!");
 
-
+// In ra consle xem có chú chó nào ăn CHÍNH XÁC lượng thức ăn được recommended hay không (chỉ in true hoặc false)
 const exactlyRecFood = dogs.every(function(dog) {
     return dog.recFood === dog.curFood;
 });
 console.log("Have dog eats exactly recommended food?");
 console.log(exactlyRecFood);
 
-let tenPercentRecFood;
+// In ra consle xem có chú chó nào ăn ĐỦ lượng thức ăn hay không (chỉ in true hoặc false)
 const enoughFood = dogs.some(function(dog) {
-    tenPercentRecFood = dog.recFood * 10 / 100;
-    const min = dog.recFood - tenPercentRecFood.toFixed(2);
-    const max = dog.recFood + +tenPercentRecFood.toFixed(2);
-    return (dog.curFood >= min && dog.curFood <= max);
+    minFood = dog.recFood * .9;
+    maxFood = dog.recFood * 1.1;
+    return (dog.curFood >= minFood && dog.curFood <= maxFood);
 });
 console.log("Have dog eats enough recommended food?");
 console.log(enoughFood);
 
-
-const enoughFoodDogs = [];
-dogs.forEach(function(dog) {
-    tenPercentRecFood = dog.recFood * 10 / 100;
-    const min = dog.recFood - tenPercentRecFood.toFixed(2);
-    const max = dog.recFood + +tenPercentRecFood.toFixed(2);
-    if (dog.curFood >= min && dog.curFood <= max) {
-        enoughFoodDogs.push(dog);
-    };
+// Tạo một mảng chứa những chú chó ăn đủ lượng thức ăn
+const enoughFoodDogs = dogs.filter(function(dog) {
+    minFood = dog.recFood * .9;
+    maxFood = dog.recFood * 1.1;
+    return dog.curFood >= minFood && dog.curFood <= maxFood;
 });
 console.log("Dogs eat enough food: ");
 console.log(enoughFoodDogs);
 
+// Tạo một mảng shallow copy từ mảng đã cho và sắp xếp tăng dần theo lượng thức ăn recommended
 const newDogs = dogs;
-// Cái này ảo ma quá =))
-// newDogs.sort(function(a, b) {
-//     return a.recFood - b.recFood;
-// });
-// console.log(newDogs);
-// Sort increasing dogs by recommended amount of food
-for (let i = 0; i < newDogs.length - 1; i++) {
-    let m = i;
-    for (let j = i + 1; j < newDogs.length; j++) {
-        if (newDogs[j].recFood < newDogs[m].recFood) m = j;
-    }
-
-    if (m != i) {
-        let obj = newDogs[i];
-        newDogs[i] = newDogs[m];
-        newDogs[m] = obj;
-    }
-}
+newDogs.sort(function(a, b) {
+    return a.recFood - b.recFood;
+});
 console.log("Sort increasing dogs by recommended amount of food: ")
 console.log(newDogs);
